@@ -7,7 +7,7 @@ import ParagraphDiv from "./ParagraphDiv"
 
 const Card = () => {
     const [data, setImage] = useState([]);
-    const [date, setDate] = useState('2019-07-17');
+    const [date, setDate] = useState('');
     function changeDate(e){
         e.preventDefault();
         let userDate = e.target[0].value;
