@@ -3,15 +3,17 @@ import axios from "axios";
 import DateInput from "./DateInput";
 import ImageDiv from "./ImageDiv";
 import TitleDiv from "./TitleDiv";
-import ParagraphDiv from "./ParagraphDiv"
+import ParagraphDiv from "./ParagraphDiv";
+import ButtonExampleGroupMixed from "./Button";
+//import ModalExampleDimmer from "./Modal"
 
 const Card = () => {
     const [data, setImage] = useState([]);
     const [date, setDate] = useState('');
+    console.log(date)
     function changeDate(e){
         e.preventDefault();
         let userDate = e.target[0].value;
-        console.log(userDate)
         setDate(userDate)
     }
 
@@ -24,12 +26,17 @@ const Card = () => {
             })
     }, [date]);
     return (
-     <div>
-        <DateInput changeDate = {changeDate}/>  
+     <div className="container">
         <TitleDiv title={data.title}/>
+        {/* <ModalExampleDimmer /> */}
+        <DateInput changeDate = {changeDate}/>  
         <ImageDiv image = {data.url}/>
+        <ButtonExampleGroupMixed />
+       
         <ParagraphDiv parag={data.explanation}/>
+        
     </div>
+    
     )
 }
 

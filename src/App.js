@@ -6,9 +6,6 @@ function App() {
   
   return (
     <div className="App">
-      <h1>
-        Nasa APOD!
-      </h1>
       <Card />
     </div>
   );

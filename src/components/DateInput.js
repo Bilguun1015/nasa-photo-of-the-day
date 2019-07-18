@@ -1,13 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 
+
+const StyleF = styled.form`
+  text-align : right;
+`;
 
 function DateInput ({changeDate}) {
     return (
-        <form onSubmit={changeDate}>
-            Enter a date (YYYY-MM-DD):
+        <StyleF onSubmit={changeDate}>
+            Enter a date (YYYY-MM-DD): 
             <input />
             <input type="submit" />
-        </form>
+        </StyleF>
     )
 } 
     
